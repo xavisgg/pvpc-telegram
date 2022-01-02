@@ -38,7 +38,7 @@ if len(sys.argv) > 1:
       print("incorrect date format, use YYYY-MM-DD")
       sys.exit()
 else:
-  target_date = date.today() + timedelta(days=1)
+  target_date = datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=1)
 
 #1-Read setup from file to get the Telegram Token and the CHAT IDs to be notified
 with open("./../data/setup.json", "r") as content:
