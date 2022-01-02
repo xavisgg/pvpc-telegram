@@ -1,0 +1,8 @@
+{
+    //Telegram bot token 
+    "BOT_TOKEN" : "XXXXXXXXX:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+    //Telegram chat ids
+    "CHAT_IDS": ["CHAT_ID1", "CHAT_ID2"],
+    //esios api token
+    "API_TOKEN": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}
