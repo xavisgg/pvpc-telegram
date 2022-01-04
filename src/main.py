@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 from datetime import date, timedelta, datetime
 import sys
 import json
+import os
 from pvpc_api import PvpcPrices
 
 #CONSTANTS
@@ -39,6 +40,11 @@ if len(sys.argv) > 1:
       sys.exit()
 else:
   target_date = datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=1)
+
+#Working dir
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
 
 #1-Read setup from file to get the Telegram Token and the CHAT IDs to be notified
 with open("./../data/setup.json", "r") as content:

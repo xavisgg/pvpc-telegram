@@ -7,7 +7,6 @@ from sklearn.cluster import KMeans
 import numpy as np
 
 
-
 class PvpcPrices():
 
     def __init__(self, api_token, target_date, geo_id=8741):
@@ -19,7 +18,6 @@ class PvpcPrices():
         self.data = pd.DataFrame(columns=self.columns)
         self.target_date = target_date
         self.geo_id=geo_id
-
 
     def download_data(self):
         start_date = self.target_date - timedelta(hours=1)
